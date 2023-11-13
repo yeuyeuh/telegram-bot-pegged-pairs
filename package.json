@@ -1,0 +1,25 @@
+{
+  "name": "telegram-bot-pegged-pairs",
+  "version": "1.0.0",
+  "description": "telegram bot which tracks pegged pairs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeuyeuh/telegram-bot-pegged-pairs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeuyeuh/telegram-bot-pegged-pairs/issues"
+  },
+  "homepage": "https://github.com/yeuyeuh/telegram-bot-pegged-pairs#readme",
+  "dependencies": {
+    "axios": "^1.6.1",
+    "node-telegram-bot-api": "^0.64.0"
+  }
+}
