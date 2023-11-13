@@ -14,7 +14,7 @@ const chatId = '-4024637922';
 // Fonction pour obtenir le prix de l'ETH en USDC depuis Dexscreener
 async function get_stETH_WETH_Price() {
   try {
-    console.log('try to get price');
+    //console.log('try to get price');
       const response = await axios.get(dexscreenerApiUrl);
       const pairs = response.data.pairs;
 
@@ -29,7 +29,7 @@ async function get_stETH_WETH_Price() {
 
       if (pair) {
           const priceNative = pair.priceNative;
-          if(priceNative<0.995){
+          if(priceNative<0.99999){
             return {msg:'*stETH<0.995 in uniswap V2 :*', priceNative:priceNative, url:url};
           } else if (priceNative>1){
             return {msg:'*stETH>1 in uniswap V2 :*',priceNative:priceNative, url:url};
@@ -56,4 +56,4 @@ async function send_stETH_WETH_Price() {
 // Déclencher la fonction toutes les minutes
 setInterval(() => {
   send_stETH_WETH_Price();
-}, 60 * 1000); // 1 minute en millisecondes
+}, 1 * 1000); // 1 minute en millisecondes
