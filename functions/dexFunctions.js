@@ -6,16 +6,16 @@ async function get_stETH_WETH_Price() {
     const dexscreenerApiUrl = 'https://api.dexscreener.com/latest/dex/pairs/ethereum/0x4028daac072e492d34a3afdbef0ba7e35d8b55c4';
     const response = await axios.get(dexscreenerApiUrl);
     const pairs = response.data.pairs;
-
+    console.log("get eth");
     const pair = pairs.find(pair =>
       pair.baseToken.symbol === 'stETH' && pair.quoteToken.symbol === 'WETH'
     );
-
+    console.log("pair");
     if (pair) {
       const priceNative = pair.priceNative;
       let msg = '';
 
-      if (priceNative < 0.999) {
+      if (priceNative < 1) {
         msg = '*stETH < 0.999 in Uniswap V2:*';
         return { msg, priceNative, url: response.data.pair.url };
       } else if (priceNative > 1) {

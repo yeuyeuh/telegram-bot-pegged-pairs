@@ -71,6 +71,7 @@ const chatId = '-4024637922';
 // Initialiser le bot Telegram
 const bot = new TelegramBot(token, { polling: true });
 console.log("booot");
+
 // Écouter les commandes /start
 bot.onText(/\/start/, (msg) => {
   console.log("start");
@@ -82,7 +83,7 @@ bot.onText(/\/start/, (msg) => {
 async function send_stETH_WETH_Price() {
   console.log("send eth");
   const results = await get_stETH_WETH_Price();
-  //console.log(results);
+  console.log(results);
   if (results && results.priceNative !== null) {
       const message = `${results.msg}\nstETH = ${results.priceNative} WETH \n${results.url}`;
       console.log("succeed eth");
