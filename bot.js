@@ -68,8 +68,7 @@ const { get_stETH_WETH_Price } = require('./functions/dexFunctions');
 const token = '6620822179:AAEFuaoJZY9f91JebAdzS1Wf3FS9H5Y3Yqs';
 const chatId = '-4024637922';
 
-// Initialiser le bot Telegram
-const bot = new TelegramBot(token, { polling: true });
+
 
 // Fonction pour envoyer le prix dans le canal Telegram
 async function send_stETH_WETH_Price() {
@@ -77,6 +76,8 @@ async function send_stETH_WETH_Price() {
   if (results && results.priceNative !== null) {
       const message = `${results.msg}\nstETH = ${results.priceNative} WETH \n${results.url}`;
 
+      // Initialiser le bot Telegram
+      const bot = new TelegramBot(token, { polling: true });
 
       // Envoyer le message
       bot.sendMessage(chatId, message, { parse_mode: 'Markdown', disable_web_page_preview: true });
@@ -86,4 +87,4 @@ async function send_stETH_WETH_Price() {
 // Déclencher la fonction toutes les minutes
 setInterval(() => {
   send_stETH_WETH_Price();
-}, 60 * 1000); // 1 minute en millisecondes
+}, 10 * 1000); // 1 minute en millisecondes
