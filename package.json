@@ -4,7 +4,7 @@
   "description": "telegram bot which tracks pegged pairs",
   "main": "functions/dexFunctions.js",
   "scripts": {
-    "start": "nohup node functions/dexFunctions.js &"
+    "start": "node functions/dexFunctions.js & disown"
   },
   "repository": {
     "type": "git",
