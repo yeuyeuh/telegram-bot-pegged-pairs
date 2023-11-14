@@ -12,7 +12,7 @@ exports.handler = async (event) => {
   // Fonction pour obtenir le prix de l'ETH en USDC depuis Dexscreener
   async function get_stETH_WETH_Price() {
     try {
-      //console.log('try to get price');
+      console.log('try to get price');
         const response = await axios.get(dexscreenerApiUrl);
         const pairs = response.data.pairs;
   
