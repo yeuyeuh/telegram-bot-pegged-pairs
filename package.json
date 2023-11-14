@@ -2,7 +2,7 @@
   "name": "telegram-bot-pegged-pairs",
   "version": "1.0.0",
   "description": "telegram bot which tracks pegged pairs",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
   },

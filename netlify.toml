@@ -1,8 +1,0 @@
-[build]
-  command = "npm install"  # Assurez-vous d'adapter cette commande à votre projet
-  functions = "functions"  # Répertoire des fonctions Netlify
-
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/bot"
-  status = 200
