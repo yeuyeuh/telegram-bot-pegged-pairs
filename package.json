@@ -4,7 +4,8 @@
   "description": "telegram bot which tracks pegged pairs",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.js",
+    "build": "echo 'No build step needed'"
   },
   "repository": {
     "type": "git",
