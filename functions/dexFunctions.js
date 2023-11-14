@@ -14,13 +14,15 @@ async function get_stETH_WETH_Price() {
       const priceNative = pair.priceNative;
       let msg = '';
 
-      if (priceNative < 0.995) {
+      if (priceNative < 0.999) {
         msg = '*stETH < 0.995 in Uniswap V2:*';
+        return { msg, priceNative, url: response.data.pair.url };
       } else if (priceNative > 1) {
         msg = '*stETH > 1 in Uniswap V2:*';
+        return { msg, priceNative, url: response.data.pair.url };
       }
 
-      return { msg, priceNative, url: response.data.pair.url };
+      
     } else {
       console.error('La paire stETH/WETH n\'a pas été trouvée.');
       return null;
