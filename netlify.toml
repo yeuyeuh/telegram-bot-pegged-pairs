@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build"  # Assurez-vous d'adapter cette commande à votre projet
+  command = "npm install"  # Assurez-vous d'adapter cette commande à votre projet
   functions = "functions"  # Répertoire des fonctions Netlify
 
 [[redirects]]
