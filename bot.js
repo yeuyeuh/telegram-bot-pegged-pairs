@@ -74,7 +74,7 @@ const bot = new TelegramBot(token, { polling: true });
 // Fonction pour envoyer le prix dans le canal Telegram
 async function send_stETH_WETH_Price() {
   const results = await get_stETH_WETH_Price();
-  if (results && results.priceNative !== null) {
+  if (results !== null) {
       const message = `${results.msg}\nstETH = ${results.priceNative} WETH \n${results.url}`;
 
 
