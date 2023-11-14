@@ -70,7 +70,13 @@ const chatId = '-4024637922';
 
 // Initialiser le bot Telegram
 const bot = new TelegramBot(token, { polling: true });
-
+console.log("booot");
+// Écouter les commandes /start
+bot.onText(/\/start/, (msg) => {
+  console.log("start");
+  const chatId = msg.chat.id;
+  bot.sendMessage(chatId, 'Bienvenue! Je suis votre bot Dexscreener.');
+});
 
 // Fonction pour envoyer le prix dans le canal Telegram
 async function send_stETH_WETH_Price() {
