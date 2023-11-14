@@ -71,7 +71,9 @@ async function send_stETH_WETH_Price() {
   }
 }
 
+/*
 // Déclencher la fonction toutes les minutes
 setInterval(() => {
   send_stETH_WETH_Price();
 }, 10 * 1000); // 1 minute en millisecondes
+*/
