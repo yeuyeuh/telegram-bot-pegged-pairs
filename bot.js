@@ -61,6 +61,10 @@ setInterval(() => {
 
 */
 
+
+
+/*
+
 const TelegramBot = require('node-telegram-bot-api');
 
 const { get_stETH_WETH_Price } = require('./functions/dexFunctions');
@@ -97,3 +101,6 @@ async function send_stETH_WETH_Price() {
 setInterval(() => {
   send_stETH_WETH_Price();
 }, 10 * 1000); // 1 minute en millisecondes
+
+
+*/
